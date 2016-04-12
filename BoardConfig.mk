@@ -17,7 +17,7 @@
 # inherit from common sprout repo
 #-include device/google/sprout-common/BoardConfigCommon.mk
 
-LOCAL_PATH := device/google/sprout-common
+LOCAL_PATH := device/google/sprout
 
 TARGET_BOARD_PLATFORM := mt6582
 TARGET_CPU_ABI := armeabi-v7a
@@ -29,7 +29,7 @@ ARCH_ARM_HAVE_NEON := true
 TARGET_NO_BOOTLOADER := true
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH_VARIANT_CPU := cortex-a7
-TARGET_CPU_VARIANT:= cortex-a7
+TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # Storage allocations
@@ -49,6 +49,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 TARGET_OTA_ASSERT_DEVICE := sprout,sprout4
 
 # TWRP stuff
+TW_THEME := PORTRAIT_MDPI
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
@@ -62,4 +63,4 @@ TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_NO_USB_STORAGE := true
 
-TARGET_RECOVERY_FSTAB := device/google/sprout4/rootdir/root/twrp.fstab
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/root/twrp.fstab
