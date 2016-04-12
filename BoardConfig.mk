@@ -46,7 +46,7 @@ BOARD_KERNEL_CMDLINE :=
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_OTA_ASSERT_DEVICE := sprout,sprout4
+TARGET_OTA_ASSERT_DEVICE := sprout,sprout4,sprout8
 
 # TWRP stuff
 TW_THEME := portrait_mdpi
@@ -63,4 +63,6 @@ TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_NO_USB_STORAGE := true
 
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/root/twrp.fstab
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/twrp.fstab
+TARGET_RECOVERY_INITRC := $(LOCAL_PATH)/rrecovery/root/init.rc
+TARGET_RECOVERY_DEVICE_DIRS += device/google/sprout
