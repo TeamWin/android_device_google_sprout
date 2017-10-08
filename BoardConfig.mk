@@ -60,6 +60,7 @@ TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/mtk-msdc.0/by-name/userdata"
 TW_CRYPTO_MNT_POINT := "/data"
 TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone5/temp
 TW_MAX_BRIGHTNESS := 255
 TW_NO_USB_STORAGE := true
 
